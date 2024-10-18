@@ -23,6 +23,7 @@
 
 // ///////////////////////////////////////////////
 // const medium = [5, 2, 8,1,6, 9, 4,9];
+// const medium    = ["a","p","j","i","g","k"]
 // for (i = 0; i < medium.length; i++) {
 //   for (j = 0; j < medium.length; j++) {
 //     if (medium[i] < medium[j]) {
@@ -41,17 +42,21 @@
 //     console.log(`even ${medium[res-1]},${medium[res]}`);
 // }
 
-// const mode = [2,5,6,6,6,62,4,8,7];
-// const result = [];
-// for(i=0;i<mode.length;i++){
-//     let count=0;
-//     let inc = count;
-//     for(j=0;j<mode.length;j++){
-//         if(mode[i] == mode[j]){
-//             count++;
-//         }
-//     }
-//             result.push(`${mode[i]}:${count}`);
-// }
-// console.log(result);
+const mode = [2,5,6,6,6,62,8,7];
+const result = [];
+let num =0;
+let value;
+for(i=0;i<mode.length;i++){
+    let count=0;
+    for(j=0;j<mode.length;j++){
+      if(mode[i] == mode[j]){
+        count++;
+      }
+    }
+      if(num < count){
+        num = count;
+        value = mode[i]
+      }
+}
+console.log(`${value}:${num}`);
 
