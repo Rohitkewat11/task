@@ -53,10 +53,7 @@ for(i=0;i<mode.length;i++){
         count++;
       }
     }
-      if(num < count){
-        num = count;
-        value = mode[i]
-      }
+    num < count && (num = count,value = mode[i])
 }
 console.log(`${value}:${num}`);
 
